@@ -1,0 +1,22 @@
+plugins {
+   id 'java'
+   id 'war'
+}
+
+
+repositories {
+   mavenCentral()
+}
+
+dependencies {
+   providedCompile 'jakarta.platform:jakarta.jakartaee-web-api:9.0.0'
+}
+
+compileJava {
+   targetCompatibility = '11'
+   sourceCompatibility = '11'
+}
+
+war {
+   archiveName 'helloworld.war'
+}
